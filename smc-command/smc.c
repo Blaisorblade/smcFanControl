@@ -718,6 +718,11 @@ int main(int argc, char *argv[])
                   val.dataSize = 4;
                   memcpy(val.bytes, &fval, sizeof(fval));
                   memcpy(val.dataType, DATATYPE_FLT, sizeof(val.dataType));
+
+                  // Debugging code
+                  printf("Writing: ");
+                  printVal(val);
+                  printf("\n");
                 }
                 break;
             case 'w':
