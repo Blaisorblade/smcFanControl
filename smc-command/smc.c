@@ -714,6 +714,7 @@ int main(int argc, char *argv[])
                 {
                   float fval;
                   fval = strtof(optarg, NULL);
+                  //printf("Input: %f\n", fval);
 
                   val.dataSize = 4;
                   memcpy(val.bytes, &fval, sizeof(fval));
@@ -796,6 +797,8 @@ int main(int argc, char *argv[])
                 result = SMCWriteKey(val);
                 if (result != kIOReturnSuccess)
                     printf("Error: SMCWriteKey() = %08x\n", result);
+                //else
+                    //printf("SMCWriteKey() succeeded\n");
             }
             else
             {
